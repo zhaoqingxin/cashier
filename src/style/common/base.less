@@ -1,0 +1,143 @@
+/**
+*清除并定义默认样式
+*/
+
+
+/*为了方便,定义盒模型为border-box*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+/*默认字体14像素*/
+body {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: @font-gray;
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+i, em {
+    font-style: normal;
+}
+
+img {
+    vertical-align: middle;
+}
+a img {
+    border: 0;
+}
+
+/*清除并自定义input的样式*/
+input{
+    padding: 0;
+}
+label{
+    height: 20px;
+    line-height: 20px;
+}
+input[type="text"],input[type="password"],input[type="email"]{
+    height: 34px;
+    padding:6px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: @white;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition:border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus{
+    border-color: #66afe9;
+    outline: 0 none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+button,input[type="button"],input[type="submit"]{
+    border: 0;
+    padding: 0;
+}
+input[type="button"]:focus,input[type="submit"]:focus,button:focus{
+    outline: none;
+}
+input[type="button"]:hover,input[type="submit"]:hover,button:hover{
+    cursor: pointer;
+}
+
+/*表格*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    padding: 0;
+}
+
+/*标题和段落*/
+p {
+    margin: 0;
+    padding:0;
+    line-height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/*列表*/
+ul, ol, li, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+
+
+/*清除浮动*/
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+
+
+
+
+

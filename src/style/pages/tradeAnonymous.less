@@ -1,0 +1,486 @@
+@import "../common/base";
+@import "../common/custom";
+@import "../common/bank";
+/*头部开始*/
+.header {
+    /*顶部用户状态条*/
+    .user-bar {
+        height: 30px;
+        background-color: @user-bar-color;
+        color: @white;
+        ul {
+            .float-right;
+            li {
+                .float-left;
+                height: 12px;
+                font-size: 12px;
+                margin-top: 9px;
+                padding-left: 12px;
+                padding-right: 12px;
+                a {
+                    color: @white;
+                }
+            }
+            .border-right {
+                border-right: 1px solid @white;
+            }
+        }
+    }
+    /*logo*/
+    .logo-bar {
+        background-color: @bg-gray;
+        height: 80px;
+        border-bottom:2px solid @light-border-gray;
+        h1{
+            .float-left;
+            width: 220px;
+            text-indent: -10000em;
+            height: 78px;;
+            background:url("../../images/logo-no.png") no-repeat center left;
+        }
+        p{
+            .float-left;
+            padding-top: 40px;
+            font-size: 16px;
+            color: @light-font-gray;
+        }
+    }
+}
+
+
+/*主内容区开始*/
+.content{
+    color: @font-gray;
+    background-color: @light-bg-gray;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    /*交易信息开始*/
+    .trade-info{
+        .position-relative;
+        background: @trade-info-color;
+        padding: 44px 49px;
+        margin-bottom:16px;
+        border: 1px solid @border-gray;
+        border-bottom: 3px solid @dark-border-gray;
+        /*交易概览开始*/
+        .overview{
+            padding-bottom: 12px;
+            /*商家信息*/
+            .business{
+                .float-left;
+                h3{
+                    font-size: 26px;
+                    padding-bottom: 18px;
+                }
+                p{
+                    color: @light-font-gray;
+                    font-size: 12px;
+                }
+            }
+            /*交易金额*/
+            .amount{
+                .float-right;
+                padding-top: 10px;
+                p{
+                    line-height: 30px;
+                    .money{
+                        .float-left;
+                        font-size: 30px;
+                        height: 30px;
+                        color: @dark-theme-color;
+                        padding-right: 8px;
+                    }
+                    .unit{
+                        .float-left;
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding-top: 10px;
+                    }
+                }
+
+            }
+        }
+        /*交易详情*/
+        .details{
+            padding:10px 0;
+            border-top:1px dashed @light-border-gray;
+            table{
+                td,th{
+                    border:1px solid @border-gray;
+                    text-align: center;
+                    background: @white;
+                }
+            }
+        }
+        /*显示隐藏交易详情的按钮*/
+        .details-btn{
+            .position-absolute;
+            bottom: 0;
+            right: 49px;
+            width: 78px;
+            height: 26px;
+            line-height: 26px;
+            background: @dark-border-gray;
+            text-align: center;
+            color: @white;
+        }
+    }
+
+    /*支付部分开始*/
+    .cashier-payment{
+        border:1px solid @border-gray;
+        background-color: @white;
+        /*选择银行卡类型*/
+        .payment-tag{
+            .position-relative;
+            height: 50px;
+            margin-top: -1px;
+            border-top:1px solid @border-gray;
+            border-bottom:1px solid @border-gray;
+            background-color: @bg-gray;
+            ul{
+                .position-relative;
+                margin-top: -1px;
+                height: 50px;
+                li{
+                    .float-left;
+                    border-right:1px solid @border-gray;
+                    padding:0 34px;
+                    height: 50px;
+                    line-height: 50px;
+                    a{
+                        color: @dark-font-gray;
+                        font-size: 14px;
+                    }
+                }
+                li.active{
+                    border-top:2px solid @theme-color;
+                    background-color: @white;
+                    background-image: url("../../images/triangle-small.png");
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    border-bottom: none;
+                    line-height: 46px;
+                    a{
+                        color: @theme-color;
+                    }
+                }
+            }
+
+        }
+
+        /*选择银行开始*/
+        .payment-bank-list{
+            padding: 22px 0;
+            .mainBank-list{
+                /*online-bank代表网银*/
+                ul.online-bank-list{
+                    li{
+                        .float-left;
+                        padding-left: 30px;
+                        padding-top: 16px;
+                        a{
+                            border:1px solid @light-border-gray;
+                        }
+                        a.active{
+                            border:2px solid @light-theme-color;
+                        }
+                    }
+                }
+                /*已绑定快捷卡列表*/
+                ul.qpay-bank-list{
+                    li.bound-qpay-bank{
+                        .float-left;
+                        padding-left: 20px;
+                        padding-top: 16px;
+                        a{
+                            display: block;
+                            border-radius: 4px;
+                            width:220px;
+                            height: 140px;
+                            border:1px solid @light-border-gray;
+                            overflow: hidden;
+                            div{
+                                height: 46px;
+                                border-bottom: 1px solid @light-border-gray;
+                                p.qpay-bank-count{
+                                    padding-top: 8px;
+                                    height: 38px;
+                                    span{
+                                        .float-left;
+                                    }
+                                    .tail-num{
+                                        padding-top: 12px;
+                                        font-size: 12px;
+                                    }
+                                }
+                                p.qpay-bank-info{
+                                    padding-top: 10px;
+                                    padding-bottom: 12px;
+                                    height: 46px;
+                                    span{
+                                        .float-left;
+                                        height: 26px;
+                                        line-height: 26px;
+                                    }
+                                    .qpay-bind{
+                                        margin-left: 10px;
+                                        margin-right: 10px;
+                                        background: url("../../images/qpay-bg.png") no-repeat;
+                                        color: @white;
+                                        width: 78px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                    }
+                                }
+                                p.qpay-bank-type{
+                                    padding-top: 14px;
+                                    padding-bottom: 14px;
+                                    height: 18px;
+                                    span{
+                                        margin-right: 4px;
+                                        .float-right;
+                                        height: 18px;
+                                        width: 46px;
+                                        line-height: 18px;
+                                        background: url("../../images/bank-type-bg.png");
+                                        color: @white;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                        a.active{
+                            border:2px solid @light-theme-color;
+                        }
+                    }
+                    li.bind-new-bank-btn{
+                        .float-left;
+                        padding-left: 20px;
+                        padding-top: 16px;
+                        a {
+                            display: block;
+                            border-radius: 4px;
+                            width: 220px;
+                            height: 140px;
+                            border: 1px solid @light-border-gray;
+                            overflow: hidden;
+                            background-color: @light-bg-gray;
+                            p.add{
+                                margin: 30px auto 20px;
+                                width: 44px;
+                                height: 44px;
+                                background:url("../../images/plus-symbol.png")no-repeat;
+                            }
+                            p{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*表单部分开始*/
+        .result{
+            padding: 32px 30px;
+            p.tip{
+                padding-bottom: 16px;
+                .emphasis{
+                    color: @warn-color;
+                }
+                font-size: 12px;
+            }
+            p.security{
+                background: url("../../images/small-succeed.png") left top no-repeat;
+                padding-left: 20px;
+                padding-top: 2px;
+                font-size: 12px;
+            }
+            .result-form{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                button{
+                    .btn-threme;
+                    color: @white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/*模态弹出框,绑定快捷卡开始*/
+.dialog-box{
+    width:100%;
+    .position-fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+    /*半透明背景*/
+    .bg{
+        width:100%;
+        background: #000;
+        opacity:0.2;
+        filter:alpha(opacity=20);
+    }
+    /*设置居中容器*/
+    .dialog-content-box{
+        .position-absolute;
+        z-index: 500;
+        top:50%;
+        left:50%;
+        margin-left:-406px;
+        margin-top: -206px;
+        padding: 6px;
+        background-color: rgba(0,0,0,0.6);
+        /*内容区*/
+        .dialog-content{
+            width: 800px;
+            height: 400px;
+            background-color: @white;
+            h2{
+                border-bottom: 1px solid #e6e6e6;
+                font-size: 16px;
+                padding:10px 20px;
+            }
+            .close{
+                .position-absolute;
+                z-index: 1000;
+                top:16px;
+                right: 18px;
+                width: 12px;
+                height: 12px;
+                background: url("../../images/close.png") no-repeat;
+            }
+            /*用户操作内容区,这部分内容会根据用户的操作显示隐藏*/
+            .wrapper{
+                padding: 20px 0 20px 20px;
+                /*输入卡号,识别卡片信息*/
+                .identification-card{
+                    .padding-top40;
+                    .padding-left20;
+                    .item{
+                        .padding-bottom10;
+                        .item-left{
+
+                            height: 42px;
+                            border:1px solid @dark-border-gray;
+                            padding-top: 3px;
+                            label{
+                                font-size: 16px;
+                                text-align: center;
+                            }
+                            input{
+                                border-width: 0;
+                                font-size: 16px;
+                            }
+                            input:focus{
+                                border-width: 1px;
+                            }
+                        }
+                        .item-right{
+                            height: 42px;
+                            line-height: 42px;
+                        }
+                    }
+                    .tip{
+                        .padding-bottom50;
+                        .font12;
+                    }
+                }
+                /*选择银行卡类型*/
+                .select-card-type{
+                    .select-card-info{
+                        .padding-top10;
+                        .padding-bottom20;
+                        border-bottom: 1px solid @light-border-gray;
+                        margin-bottom: 16px;
+                        font-size: 14px;
+                        span{
+                            float: left;
+                        }
+                    }
+                    a{
+                        color: @theme-color;
+                    }
+                }
+                /*手动选择银行卡*/
+                .payment-bank-list{
+                    p.payment-bank-list-info{
+                        padding-left: 20px;
+                        span{
+                            .float-left;
+                            padding-right: 12px;
+                            a{
+                                color: @theme-color;
+                            }
+                        }
+
+                    }
+                    .mainBank-list{
+                        height: 200px;
+                        overflow-y: auto;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                        ul.online-bank-list{
+                            li{
+                                .float-left;
+                                padding-left: 10px;
+                                padding-top: 16px;
+                                padding-right: 10px;
+                                a{
+                                    border:1px solid @light-border-gray;
+                                }
+                                a.active{
+                                    border:2px solid @light-theme-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                /*确认页*/
+                .confirm{
+                    padding-right: 20px;
+                    .confirm-info{
+                        padding: 12px;
+                        height: 66px;
+                        border: 3px solid @dark-border-gray;
+                        .margin-top20;
+                        .margin-bottom20;
+                        span{
+                            float: left;
+                            line-height: 36px;
+                            height: 36px;
+                        }
+                        .card-type{
+                            width: 46px;
+                            background: url("../../images/bank-type-bg.png") no-repeat center left;
+                            color: @white;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                        .back{
+                            .float-right;
+                            a{
+                                color: @theme-color;
+                            }
+                        }
+                        .type{
+                            margin-left: 10px;
+                            margin-right: 10px;
+                            background: url("../../images/qpay-bg.png") no-repeat center;
+                            color: @white;
+                            width: 78px;
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+                    .support{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

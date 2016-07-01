@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chanpay</title>
+</head>
+<body>
+<!--头部开始-->
+<div class="header">
+    <!--顶部用户状态条-->
+    <div class="user-bar">
+        <div class="contain clearfix">
+            <ul>
+                <li class="border-right">
+                    你好
+                </li>
+                <li class="border-right">
+                    <a href="javascript:;">帮助中心</a>
+                </li>
+                <li>
+                    <a href="javascript:;">安全退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--logo-->
+    <div class="logo-bar">
+        <div class="contain clearfix">
+            <h1>畅捷支付</h1>
+            <p>
+                收银台
+            </p>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+
+
+<!--主内容区开始-->
+<div class="content">
+    <div class="contain">
+        <!--交易信息开始-->
+        <div class="trade-info">
+            <!--交易概览开始-->
+            <div class="overview clearfix">
+                <!--商家信息-->
+                <div class="business">
+                    <h3>东风雪铁龙</h3>
+                    <p>
+                        <span>收款商家: </span>
+                        <span>测试卖家</span>
+                    </p>
+                </div>
+                <!--交易金额-->
+                <div class="amount">
+                    <p class="clearfix">
+                        <span class="money">
+                            0.20
+                        </span>
+                        <span class="unit">
+                            元
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!--交易概览结束-->
+
+            <!--交易详情开始-->
+            <div class="details" style="display: none;">
+                <table>
+                    <table width="900">
+                        <tr height="36">
+                            <th>类型</th>
+                            <th>交易信息</th>
+                            <th>交易号</th>
+                            <th>对方</th>
+                            <th>金额</th>
+                        </tr>
+                        <tr height="36">
+                            <td>即时到账交易</td>
+                            <td>东风雪铁龙汽车</td>
+                            <td>101146649778968593892</td>
+                            <td>东风雪铁龙</td>
+                            <td>1.00元</td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+            <!--交易详情结束-->
+
+            <!--显示隐藏交易详情-->
+            <a href="javascript:;" class="details-btn">
+                订单详情
+            </a>
+        </div>
+        <!--交易信息结束-->
+
+
+        <!--支付部分开始-->
+        <div class="cashier-payment">
+
+            <form>
+                <!--选择的支付卡和卡类型,以及支付金额信息-->
+                <div class="payment-info mainBank-list clearfix">
+                    <p class="float-left payment-card-type">
+                        <span class="title">
+                            开通方式:
+                        </span>
+                        <span class="BIocn ABC active">
+
+                        </span>
+                        <span>
+                            储蓄卡
+                        </span>
+                    </p>
+                    <p class="float-right">
+                        应付金额: <i class="theme-color font14">100</i>元
+                    </p>
+                </div>
+
+                <div class="qpay-card-info clearfix">
+                    <div class="fill-card-info">
+                        <div class="form-group">
+                            <label for="name" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>姓名</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+                            </div>
+                            <p class="notice col-left-3 col-6">请按照正确的格式填写</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="IDcard" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>身份证号</label>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="IDcard" placeholder="请输入身份证号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNum" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>银行卡卡号</label>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="cardNum" placeholder="请输入银行卡卡号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>有效期</label>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="date" placeholder="请输入有效期">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="valid" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>卡验证码</label>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="valid" placeholder="请输入卡验证码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>手机号码</label>
+                            <div class="col-6">
+                                <input type="email" class="form-control" id="phone" placeholder="请输入手机号码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="info" class="col-3 control-label"><i class="theme-color padding-left10 padding-right10">*</i>短信验证码</label>
+                            <div class="col-3">
+                                <input type="email" class="form-control" id="info" placeholder="短信验证码">
+                            </div>
+                            <div class="col-3">
+                                <a href="javascript:;" class="send-message">
+                                    发送短信验证码
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-left-3 col-6 select-box">
+                                <input type="checkbox">
+                                <label>
+                                     同意<i class="theme-color">《快捷支付相关协议》</i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-parse">
+
+                    </div>
+                </div>
+
+                <!--表单部分开始-->
+                <div class="result">
+                    <div class="result-form">
+                        <div class="form-group">
+                            <div class="col-left-3 col-6">
+                                <button type="button" class="btn-threme">确认支付</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--表单部分结束-->
+            </form>
+        </div>
+        <!--支付部分结束-->
+    </div>
+</div>
+<!--主内容区结束-->
+
+</body>
+</html>

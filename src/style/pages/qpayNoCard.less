@@ -1,0 +1,192 @@
+@import "../common/base";
+@import "../common/custom";
+@import "../common/bank";
+/*头部开始*/
+.header {
+    /*顶部用户状态条*/
+    .user-bar {
+        height: 30px;
+        background-color: @user-bar-color;
+        color: @white;
+        ul {
+            .float-right;
+            li {
+                .float-left;
+                height: 12px;
+                font-size: 12px;
+                margin-top: 9px;
+                padding-left: 12px;
+                padding-right: 12px;
+                //line-height: 12px;
+                a {
+                    color: @white;
+                }
+            }
+            .border-right {
+                border-right: 1px solid @white;
+            }
+        }
+    }
+    /*logo*/
+    .logo-bar {
+        background-color: @bg-gray;
+        height: 80px;
+        border-bottom:2px solid @light-border-gray;
+        h1{
+            .float-left;
+            width: 220px;
+            text-indent: -10000em;
+            height: 80px;;
+            background:url("../../images/logo-no.png") no-repeat center left;
+        }
+        p{
+            .float-left;
+            padding-top: 40px;
+            font-size: 16px;
+            color: @light-font-gray;
+        }
+    }
+}
+
+
+/*主内容区开始*/
+.content{
+    color: @font-gray;
+    background-color: @light-bg-gray;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    /*交易信息开始*/
+    .trade-info{
+        .position-relative;
+        background: @trade-info-color;
+        padding: 44px 49px;
+        margin-bottom:16px;
+        border: 1px solid @border-gray;
+        border-bottom: 3px solid @dark-border-gray;
+        /*交易概览开始*/
+        .overview{
+            padding-bottom: 12px;
+            /*商家信息*/
+            .business{
+                .float-left;
+                h3{
+                    font-size: 26px;
+                    padding-bottom: 18px;
+                }
+                p{
+                    color: @light-font-gray;
+                    font-size: 12px;
+                }
+            }
+            /*交易金额*/
+            .amount{
+                .float-right;
+                padding-top: 10px;
+                p{
+                    line-height: 30px;
+                    .money{
+                        .float-left;
+                        font-size: 30px;
+                        height: 30px;
+                        color: @dark-theme-color;
+                        padding-right: 8px;
+                    }
+                    .unit{
+                        .float-left;
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding-top: 10px;
+                    }
+                }
+
+            }
+        }
+        /*交易详情*/
+        .details{
+            padding:10px 0;
+            border-top:1px dashed @light-border-gray;
+            table{
+                td,th{
+                    border:1px solid @border-gray;
+                    text-align: center;
+                    background: @white;
+                }
+            }
+        }
+        /*显示隐藏交易详情的按钮*/
+        .details-btn{
+            .position-absolute;
+            bottom: 0;
+            right: 49px;
+            width: 78px;
+            height: 26px;
+            line-height: 26px;
+            background: @dark-border-gray;
+            text-align: center;
+            color: @white;
+        }
+    }
+
+    /*支付部分开始*/
+    .cashier-payment{
+        padding:0 100px;
+        border:1px solid @border-gray;
+        background-color: @white;
+        .payment-info{
+            height: 108px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px dotted @light-border-gray;
+            p{
+                line-height: 36px;
+            }
+            .payment-card-type span{
+                float: left;
+                margin-right: 20px;
+            }
+            .payment-card-type span.title{
+                font-size:16px;
+            }
+            .payment-card-type span.active{
+                border:2px solid @light-theme-color;
+            }
+        }
+
+        /*填写信息*/
+        .qpay-card-info{
+            .padding-top40;
+            .fill-card-info{
+                .float-left;
+                width: 550px;
+                .send-message{
+                    display: inline-block;
+                    height: 34px;
+                    line-height: 34px;
+                    padding:0 8px;
+                    background: @dark-bg-gray;
+                    border-radius: 4px;
+                    color: @white;
+                }
+            }
+            .card-parse{
+                .float-right;
+                width: 248px;
+                height: 360px;
+                background: url("../../images/card-parse.png") no-repeat left center;
+            }
+        }
+
+        /*表单部分开始*/
+        .result{
+            padding: 32px 0;
+            .result-form{
+                width:550px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+
+    }
+}
+

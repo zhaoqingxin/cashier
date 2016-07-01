@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chanpay</title>
+    <!--<link rel="stylesheet/less" type="text/css" href="../src/style/pages/trade-confirm.less" />-->
+    <!--<script src="../node_modules/less/dist/less.js"></script>-->
+    <link rel="stylesheet" href="../build/tradeConfirm.css" />
+</head>
+<body>
+<!--头部开始-->
+<div class="header">
+    <!--顶部用户状态条-->
+    <div class="user-bar">
+        <div class="contain clearfix">
+            <!--<ul>
+                <li class="border-right">
+                    你好
+                </li>
+                <li class="border-right">
+                    <a href="javascript:;">帮助中心</a>
+                </li>
+                <li>
+                    <a href="javascript:;">安全退出</a>
+                </li>
+            </ul>-->
+        </div>
+    </div>
+    <!--logo-->
+    <div class="logo-bar">
+        <div class="contain clearfix">
+            <h1>畅捷支付</h1>
+            <p>
+                收银台
+            </p>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+
+
+<!--主内容区开始-->
+<div class="content">
+    <div class="contain">
+        <!--交易信息开始-->
+        <div class="trade-info">
+            <!--交易概览开始-->
+            <div class="overview clearfix">
+                <!--商家信息-->
+                <div class="business">
+                    <h3>东风雪铁龙</h3>
+                    <p>
+                        <span>收款商家: </span>
+                        <span>测试卖家</span>
+                    </p>
+                </div>
+                <!--交易金额-->
+                <div class="amount">
+                    <p class="clearfix">
+                        <span class="money">
+                            0.20
+                        </span>
+                        <span class="unit">
+                            元
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!--交易概览结束-->
+
+            <!--交易详情开始-->
+            <div class="details" style="display: none;">
+                <table>
+                    <table width="900">
+                        <tr height="36">
+                            <th>类型</th>
+                            <th>交易信息</th>
+                            <th>交易号</th>
+                            <th>对方</th>
+                            <th>金额</th>
+                        </tr>
+                        <tr height="36">
+                            <td>即时到账交易</td>
+                            <td>东风雪铁龙汽车</td>
+                            <td>101146649778968593892</td>
+                            <td>东风雪铁龙</td>
+                            <td>1.00元</td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+            <!--交易详情结束-->
+
+            <!--显示隐藏交易详情-->
+            <a href="javascript:;" class="details-btn">
+                订单详情
+            </a>
+        </div>
+        <!--交易信息结束-->
+
+
+        <!--支付部分开始-->
+        <div class="cashier-payment">
+            <!--选择的支付卡和卡类型,以及支付金额信息-->
+            <div class="payment-info mainBank-list clearfix">
+                <p class="float-left payment-card-type">
+                    <span class="title">
+                        支付方式:
+                    </span>
+                    <span class="BIocn ABC active">
+
+                    </span>
+                    <span>
+                        储蓄卡
+                    </span>
+                </p>
+                <p class="float-right">
+                    应付金额: <i class="theme-color font14">100</i>元
+                </p>
+            </div>
+
+            <!--工商银行借记卡-->
+            <div style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='4'>借记卡</td><td>累计300</td><td>累计300</td><td>存量静态密码</td><td rowSpan='4'>热线：95588</td></tr>
+                    <tr><td>500.00</td><td>1000.00</td><td>电子银行口令卡</td></tr>
+                    <tr><td>2000.00</td><td>5000.00</td><td>电子银行口令卡+手机短信确认</td></tr>
+                    <tr><td>100万</td><td>100万</td><td>U盾</td></tr>
+                </table>
+            </div>
+            <!--工商银行信用卡-->
+            <div style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='4'>信用卡</td><td>累计300</td><td>累计300</td><td>存量静态密码</td><td rowSpan='4'>热线：95588</td></tr>
+                    <tr><td>2000.00</td><td>5000.00</td><td>电子银行口令卡+手机短信确认</td></tr>
+                    <tr><td>500.00</td><td>1000.00</td><td>动态口令</td></tr>
+                    <tr><td>信用卡本身额度</td><td>信用卡本身额度</td><td>U盾</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中国农业银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡</td><td>1000.00</td><td>1000.00</td><td>K码</td><td rowSpan='3'>银行热线：95599</td></tr>
+                    <tr><td>1000.00</td><td>3000.00</td><td>浏览器证书+动态口令卡</td></tr>
+                    <tr><td>无限额</td><td>无限额</td><td>Key宝总行证书</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中国银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>1万</td><td>10万</td><td>专业版</td><td rowSpan='2'>热线：95566</td></tr>
+                    <tr><td>1000.00</td><td>5000.00</td><td>网银快付</td></tr>
+                </table>
+            </div>
+            <!--中国银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>信用卡</td><td>5000.00</td><td>5000.00</td><td>专业版</td><td rowSpan='2'>热线：95566</td></tr>
+                    <tr><td>1000.00</td><td>5000.00</td><td>网银快付</td></tr>
+                </table>
+            </div>
+
+
+            <!--中国建设银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡/准贷记卡</td><td>1000.00</td><td>1000.00</td><td>账户支付</td><td rowSpan='3'>热线：95533</td></tr>
+                    <tr><td>50000.00</td><td>50000.00</td><td>动态口令卡</td></tr>
+                    <tr><td>500000.00</td><td>500000.00</td><td>网银盾（U宝）</td></tr>
+                </table>
+            </div>
+            <!--中国建设银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>信用卡</td><td>5000.00</td><td>5000.00</td><td>账户支付</td><td>热线：95533</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--交通银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>5000.00</td><td>5000.00</td><td>手机注册</td><td rowSpan='2'>热线：95559</td></tr>
+                    <tr><td>50000.00</td><td>50000.00</td><td>证书支付</td></tr>
+                </table>
+            </div>
+            <!--交通银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>信用卡</td><td>5000.00</td><td>5000.00</td><td>手机注册</td><td rowSpan='2'>热线：95559</td></tr>
+                    <tr><td>10000.00</td><td>10000.00</td><td>证书支付</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--招商银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>500.00</td><td>500.00</td><td>大众版</td><td rowSpan='2'>热线：95555</td></tr>
+                    <tr><td>无限额</td><td>无限额</td><td>专业版</td></tr>
+                </table>
+            </div>
+            <!--招商银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>信用卡</td><td>500.00</td><td>500.00</td><td>信用卡支付</td><td>热线：95555</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中国民生银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡/信用卡</td><td>300.00</td><td>300.00</td><td>大众版</td><td rowSpan='3'>热线：95568</td></tr>
+                    <tr><td>5000.00</td><td>5000.00</td><td>贵宾版数字证书</td></tr>
+                    <tr><td>2万</td><td>10万</td><td>贵宾版（U宝）</td></tr>
+                </table>
+            </div>
+            <!--中国民生银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡/信用卡</td><td>300.00</td><td>300.00</td><td>大众版</td><td rowSpan='3'>热线：95568</td></tr>
+                    <tr><td>5000.00</td><td>5000.00</td><td>贵宾版数字证书</td></tr>
+                    <tr><td>2万</td><td>10万</td><td>贵宾版（U宝）</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中国光大银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡</td><td>5000.00</td><td>5000.00</td><td>动态密码支付</td><td rowSpan='3'>热线：95595</td></tr>
+                    <tr><td>20万</td><td>50万</td><td>阳光网盾</td></tr>
+                    <tr><td>50万</td><td>50万</td><td>动态口令牌</td></tr>
+                </table>
+            </div>
+            <!--中国光大银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>信用卡</td><td>5000.00</td><td></td><td>动态密码支付</td><td rowSpan='2'>热线：95595</td></tr>
+                    <tr><td>20万</td><td>50万</td><td>阳光网盾</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--兴业银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡</td><td>自选1000/5000</td><td>自选1000/5000</td><td>手机验证</td><td rowSpan='3'>热线：95561</td></tr>
+                    <tr><td>5000.00</td><td>5000.00</td><td>电子支付卡（e卡）</td></tr>
+                    <tr><td>无限额</td><td>无限额</td><td>证书支付</td></tr>
+                </table>
+            </div>
+            <!--兴业银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td>信用卡</td><td>5000.00</td><td>10000.00</td><td>信用卡支付</td><td>热线：95561</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--华夏银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>借记卡</td><td>1000.00</td><td>5000.00</td><td>直接支付</td><td rowSpan='1'>热线：95577</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中信银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>1000.00</td><td>5000.00</td><td>文件证书</td><td rowSpan='2'>热线：95558</td></tr>
+                    <tr><td>100万</td><td>100万</td><td>移动证书</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--浦发银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>5万</td><td>20万</td><td>动态密码版</td><td rowSpan='2'>热线：95528</td></tr>
+                    <tr><td>10万</td><td>20万</td><td>数字证书版</td></tr>
+                </table>
+            </div>
+            <!--浦发银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>信用卡</td><td>500.00</td><td>1000.00</td><td>专业版</td><td rowSpan='1'>热线：95528</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--广发银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>3000.00</td><td>3000.00</td><td>手机动态验证码</td><td rowSpan='2'>热线：95508</td></tr>
+                    <tr><td>3000.00</td><td>3000.00</td><td>KEY盾</td></tr>
+                </table>
+            </div>
+            <!--广发银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>信用卡</td><td>500.00</td><td>1500.00</td><td>通用版</td><td rowSpan='2'>热线：95508</td></tr>
+                    <tr><td>3000.00</td><td>3000.00</td><td>证书版</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--深圳发展银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡</td><td>5000</td><td>5000</td><td>刮刮卡</td><td rowSpan='3'>热线：95501</td></tr>
+                    <tr><td>20万</td><td>20万</td><td>手机动态口令</td></tr>
+                    <tr><td>无限额</td><td>无限额</td><td>编辑器或数字证书</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--平安银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>借记卡</td><td>客户自行设置</td><td>客户自行设置</td><td>手机动态密码</td><td rowSpan='1'>热线：4006699999</td></tr>
+                </table>
+            </div>
+            <!--平安银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>信用卡</td><td>2500.00</td><td>2500.00</td><td>网上直接申请</td><td rowSpan='1'>热线：4006699999</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--中国邮政储蓄银行借记卡-->
+            <div   style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>3000.00</td><td>3000.00</td><td>手机动态密码版</td><td rowSpan='1'>热线：95580</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--北京银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01" class="clearfix">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>借记卡</td><td>累计300</td><td>累计300</td><td>普通版</td><td rowSpan='3'>热线：95526</td></tr>
+                    <tr><td>1万</td><td>1万</td><td>动态密码版</td></tr>
+                    <tr><td>100万</td><td>100万</td><td>证书版</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--上海银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>5000.00</td><td>5000.00</td><td>专业版文件证书</td><td rowSpan='2'>热线：021-962888</td></tr>
+                    <tr><td>5万</td><td>5万</td><td>专业版USB-KEY</td></tr>
+                </table>
+            </div>
+            <!--上海银行信用卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='3'>信用卡</td><td>3000.00</td><td>6000.00</td><td>大众版</td><td rowSpan='3'>热线：021-962888</td></tr>
+                    <tr><td>3000.00</td><td>6000.00</td><td>专业版文件证书</td></tr>
+                    <tr><td>5000.00</td><td>10000.00</td><td>专业版USB-KEY</td></tr>
+                </table>
+            </div>
+
+
+
+            <!--杭州银行借记卡-->
+            <div  style="display:none;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='2'>借记卡</td><td>300.00</td><td>300.00</td><td>大众版</td><td rowSpan='2'>热线：400-8888-508</td></tr>
+                    <tr><td>100万</td><td>500万</td><td>专业版</td></tr>
+                </table>
+            </div>
+            <!--杭州银行信用卡-->
+            <div  style="display:block;" class="pay_order_table_container clearfix">
+                <table class="pay_order_table tb_bord01">
+                    <tr><th width="72">卡种</th><th width="115">单笔限额（元）</th><th width="117">每日限额（元）</th><th width="215">支付方式</th><th width="239">备注</th></tr>
+                    <tr><td rowSpan='1'>信用卡</td><td>500.00</td><td>500.00</td><td>信用卡支付</td><td rowSpan='1'>热线：400-8888-508</td></tr>
+                </table>
+            </div>
+
+
+            <!--表单部分开始-->
+            <div class="result">
+                <div class="result-form">
+                    <form>
+                        <button type="button" class="btn-threme-long">登录到网上银行付款</button>
+                    </form>
+                </div>
+            </div>
+            <!--表单部分结束-->
+
+        </div>
+        <!--支付部分结束-->
+    </div>
+</div>
+<!--主内容区结束-->
+
+<div class="dialog-box client-height">
+    <div class="bg client-height"></div>
+    <!--<div class="border"></div>-->
+    <div class="dialog-content-box">
+        <div class="dialog-content">
+            <h2>
+                登录到网上银行付款
+            </h2>
+            <a href="javascript:;" class="close"></a>
+            <div class="wrapper">
+                <!--通过卡号识别卡片信息-->
+                <div class="payment-confirm">
+                    <div class="form-item clearfix">
+                        <p class="tip">
+                            亲，请付款完成前请不要关闭此窗口。完成付款后请根据您的情况 点击下面的按钮！
+                        </p>
+                    </div>
+                    <div class="clearfix">
+                        <div class="col-left-1 col-right-1 col-3">
+                            <button type="button" class="btn-threme">完成支付</button>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn-disable">支付遇到问题</button>
+                        </div>
+                    </div>
+                    <div class="padding-top20 font12 ">
+                        <a href="javascript:;" class="theme-color">返回选择其他支付方式</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../build/tradeConfirm.js"></script>
+</body>
+</html>
